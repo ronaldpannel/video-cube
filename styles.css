@@ -10,8 +10,8 @@ body {
   position: absolute;
   z-index: 10;
   top: 0;
-  left: 50%;
-  margin-bottom: 15px;
+  left: 0;
+  margin-top: 10px;
 }
 .controls audio {
   height: 20px;
