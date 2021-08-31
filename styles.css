@@ -7,14 +7,16 @@ body {
   background: #000;
 }
 .controls {
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 50%;
-  margin-top: 15px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 .controls audio {
+  position: absolute;
   height: 20px;
+  z-index: 10;
+  margin-top: 15px;
 }
 section {
   position: relative;
@@ -78,4 +80,29 @@ section .box div span:nth-child(2) video {
 
 section .box div span:nth-child(3) {
   transform: rotateX(90deg) translate3d(0, 0, 200px);
+}
+
+@media (max-width: 800px) {
+  section {
+    background: red;
+  }
+  section .box {
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 200px;
+  }
+  section .box div span:nth-child(1) {
+    transform: rotateX(0deg) translate3d(0, 0, 100px);
+  }
+  section .box div span:nth-child(2) {
+    transform: rotateY(90deg) translate3d(0, 0, -100px);
+  }
+  section .box div span:nth-child(2) video {
+    transform: rotateY(180geg);
+  }
+
+  section .box div span:nth-child(3) {
+    transform: rotateX(90deg) translate3d(0, 0, 100px);
+  }
 }
